@@ -25,7 +25,7 @@ public class Orden {
 	private Usuario usuario;
 
 	@OneToMany(mappedBy = "orden")
-	private List<DetalleOrden> ordenes;
+	private List<DetalleOrden> detalle;
 
 	public Orden() {
 
@@ -80,11 +80,11 @@ public class Orden {
 	}
 
 	public java.util.List<DetalleOrden> getOrdenes() {
-		return ordenes;
+		return detalle;
 	}
 
 	public void setOrdenes(java.util.List<DetalleOrden> ordenes) {
-		this.ordenes = ordenes;
+		this.detalle = ordenes;
 	}
 
 	@Override

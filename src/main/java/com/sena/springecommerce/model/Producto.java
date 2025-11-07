@@ -8,7 +8,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Productos")
+@Table(name = "productos")
 public class Producto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,12 +18,12 @@ public class Producto {
 	private Integer cantidad;
 	private String descripcion;
 	private String imagen;
-	
+
 	@ManyToOne
 	private Usuario usuario;
-	
+
 	public Producto() {
-		
+
 	}
 
 	public Producto(Integer id, String nombre, Double precio, Integer cantidad, String descripcion, String imagen,
@@ -99,9 +99,5 @@ public class Producto {
 		return "Producto [id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", cantidad=" + cantidad
 				+ ", descripcion=" + descripcion + ", imagen=" + imagen + "]";
 	}
-	
-	
-	
-	
-	
+
 }
