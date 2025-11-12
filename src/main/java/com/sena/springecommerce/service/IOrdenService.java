@@ -18,4 +18,6 @@ public interface IOrdenService {
 
 	public String generarNumeroOrden();
 
+	public Optional<Orden> get(Integer id);
+
 }

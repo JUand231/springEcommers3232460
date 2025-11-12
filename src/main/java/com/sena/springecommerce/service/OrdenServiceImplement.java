@@ -70,4 +70,10 @@ public class OrdenServiceImplement implements IOrdenService {
 		return numeroConcatenado;
 	}
 
+	@Override
+	public Optional<Orden> get(Integer id) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
+
 }
