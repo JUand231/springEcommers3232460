@@ -12,7 +12,7 @@ public interface IOrdenService {
 
 	public List<Orden> findAll();
 
-	public List<Orden> findByUsuario(Usuario usuario);
+	public List<Orden> findAllUsuario(Usuario usuario);
 
 	public Optional<Orden> findById(Integer id);
 
@@ -20,4 +20,5 @@ public interface IOrdenService {
 
 	public Optional<Orden> get(Integer id);
 
+	public Orden findTopByOrderByIdDesc();
 }

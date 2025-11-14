@@ -19,7 +19,7 @@ import com.sena.springecommerce.model.Usuario;
 import com.sena.springecommerce.service.IUsuarioService;
 
 @RestController
-@RequestMapping("/apiusuarios")
+@RequestMapping("/apiusuario")
 public class APIUsuarioController {
 
 	@Autowired
@@ -34,8 +34,8 @@ public class APIUsuarioController {
 
 	// Endpoint get para obtener un usuario por ID
 	@GetMapping("/usuario/{id}")
-	public ResponseEntity<Usuario> getUsuarioById(@PathVariable Integer Id) {
-		Optional<Usuario> usuario = usuarioService.get(Id);
+	public ResponseEntity<Usuario> getUsuarioById(@PathVariable Integer id) {
+		Optional<Usuario> usuario = usuarioService.get(id);
 		return usuario.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
 	}
 

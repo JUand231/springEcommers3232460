@@ -7,11 +7,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-@Entity
 @Table(name = "productos")
+@Entity
 public class Producto {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private Integer id;
 	private String nombre;
 	private Double precio;

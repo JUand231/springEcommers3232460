@@ -12,8 +12,9 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // anotación JPA
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // Anotacion JPA
 	private Integer id;
 	private String nombre;
 	private String telefono;
@@ -22,19 +23,18 @@ public class Usuario {
 	private String rol;
 	private String password;
 
-	// relaciones de DataByte
+	// Relaciones en DB
 	@OneToMany(mappedBy = "usuario")
 	private List<Producto> productos;
 
 	@OneToMany(mappedBy = "usuario")
 	private List<Orden> ordenes;
 
-	// Constructor vacio
 	public Usuario() {
 
 	}
-	// constructor con campos
 
+	// Constructor con campos
 	public Usuario(Integer id, String nombre, String telefono, String email, String direccion, String rol,
 			String password) {
 		super();
@@ -47,7 +47,6 @@ public class Usuario {
 		this.password = password;
 	}
 
-	// getters and setters
 	public Integer getId() {
 		return id;
 	}
@@ -110,4 +109,6 @@ public class Usuario {
 				+ ", direccion=" + direccion + ", rol=" + rol + ", password=" + password + "]";
 	}
 
+	
+		
 }

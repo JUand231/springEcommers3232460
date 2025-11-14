@@ -12,7 +12,7 @@ import com.sena.springecommerce.repository.IUsuarioRepository;
 @Service
 public class UsuarioServiceImplement implements IUsuarioService {
 
-	// Instancia de objeto de tipo autowired
+	// Instancia de objetos de tipo autowired
 	@Autowired
 	private IUsuarioRepository usuarioRepository;
 
@@ -52,7 +52,7 @@ public class UsuarioServiceImplement implements IUsuarioService {
 		return usuarioRepository.findByEmail(email);
 	}
 
-	@Override     
+	@Override
 	public List<Usuario> findAll() {
 		// TODO Auto-generated method stub
 		return usuarioRepository.findAll();

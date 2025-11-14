@@ -1,9 +1,21 @@
 package com.sena.springecommerce.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.sena.springecommerce.model.DetalleOrden;
+import com.sena.springecommerce.repository.IDetalleOrdenRepository;
 
-public interface IDetalleOrdenService {
+@Service
+public class IDetalleOrdenService implements IDetalleOrden {
 
-	DetalleOrden save(DetalleOrden detalleOrden);
+	@Autowired
+	private IDetalleOrdenRepository detalleOrdenRepository;
+
+	@Override
+	public DetalleOrden save(DetalleOrden detalleOrden) {
+		// TODO Auto-generated method stub
+		return detalleOrdenRepository.save(detalleOrden);
+	}
 
 }

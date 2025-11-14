@@ -10,7 +10,7 @@ import com.sena.springecommerce.model.Producto;
 import com.sena.springecommerce.repository.IProductoRepository;
 
 @Service
-public class ProductoServiceImplemente implements IProductoService {
+public class ProductoServiceImplement implements IProductoService {
 
 	@Autowired
 	private IProductoRepository productoRepository;
@@ -31,18 +31,25 @@ public class ProductoServiceImplemente implements IProductoService {
 	public void update(Producto producto) {
 		// TODO Auto-generated method stub
 		productoRepository.save(producto);
+
 	}
 
 	@Override
-	public void delete(Integer Id) {
+	public void delete(Integer id) {
 		// TODO Auto-generated method stub
-		productoRepository.deleteById(Id);
+		productoRepository.deleteById(id);
 	}
 
 	@Override
 	public List<Producto> findAll() {
 		// TODO Auto-generated method stub
 		return productoRepository.findAll();
+	}
+
+	@Override
+	public Optional<Producto> findById(Integer id) {
+		// TODO Auto-generated method stub
+		return productoRepository.findById(id);
 	}
 
 }
